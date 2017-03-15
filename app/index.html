@@ -21,10 +21,13 @@
 
     <div class="container">
     <div ng-controller="CalculatorcontrollerCtrl">
-      <p><input type="number" ng-model="mass"></p>
-      <p><input type="number" ng-model="bfPercentage"></p>
-      <p><input type="number" ng-model="proteinFactor"></p>
-      <p><input type="number" ng-model="NEAT"></p>
+      <p>Mass:<input type="number" ng-model="displayMass" ng-change="displayMassChange()">
+        <select ng-model="unitOfMeasurement" ng-options="x for x in unitOptions" ng-change="measurementChange()">
+        </select>
+      </p>
+      <p>bf%:<input type="number" step="0.5" ng-model="bfPercentage"></p>
+      <p>Protein Factor:<input type="number" step="0.05" ng-model="proteinFactor"></p>
+      <p>NEAT:<input type="number" ng-model="NEAT" step="0.1"></p>
       <p>{{ result() }}</p>
     </div>
     </div>
