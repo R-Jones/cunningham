@@ -9,7 +9,6 @@
  */
 angular.module('cunninghamApp')
   .controller('CalculatorcontrollerCtrl', function ($scope) {
-    console.log("foo");
     $scope.measurementChange = function() {
       $scope.displayMass = ($scope.unitOfMeasurement == "Pounds") ? Math.round($scope.mass * 2.2) : $scope.mass;
     }
@@ -30,10 +29,6 @@ angular.module('cunninghamApp')
       var tef = $scope.proteinFactor * rmr
       var caloricNeeds = Math.floor(rmr * $scope.NEAT + tef)
       var dict = {'a':5, 'b':7};
-      console.log("bar");
-    	//return dict
-      console.log(caloricNeeds);
-      console.log($scope.unitOfMeasurement);
       return 'Total Calorie Needs: ' + caloricNeeds;
     };
   });
