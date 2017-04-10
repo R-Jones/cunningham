@@ -17,7 +17,4 @@ describe('Controller: CalculatorcontrollerCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(CalculatorcontrollerCtrl.awesomeThings.length).toBe(3);
-  });
 });
